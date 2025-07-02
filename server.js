@@ -40,6 +40,6 @@ app.use("/api/docs", pdfDownRoutes);
 app.listen(PORT,()=>{
     console.log(`server is running port number ${PORT}`)
 })
-// app.use('/',(req,res)=>{
-//     res.send("<h1>welcome to signature app</h1>")
-// })
+app.use('/',(req,res)=>{
+    res.send("<h1>welcome to signature app</h1>")
+})
