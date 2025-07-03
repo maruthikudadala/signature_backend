@@ -18,7 +18,7 @@ dotenv.config()
 //app.use(bodyParser.json())
 app.use(express.json());
 const corsOptions = {
-    origin: ["https://signature-frontend.vercel.app"],
+    origin: ["https://signature-frontend-55v7.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   };
