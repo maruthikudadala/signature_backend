@@ -17,7 +17,14 @@ const app = express()
 dotenv.config()
 //app.use(bodyParser.json())
 app.use(express.json());
-app.use(cors())
+const corsOptions = {
+    origin: ["https://signature-frontend.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  };
+  
+  app.use(cors(corsOptions));
+  
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use('/signed', express.static('signed'));
