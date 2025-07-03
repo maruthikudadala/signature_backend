@@ -37,9 +37,10 @@ app.use("/api/email", emailRoute);
 app.use('/api/audit', auditRoute);
 app.use("/api/docs", pdfDownRoutes); 
 
+app.get('/',(req,res)=>{
+    res.send("<h1>welcome to signature app</h1>")
+})
+
 app.listen(PORT,()=>{
     console.log(`server is running port number ${PORT}`)
-})
-app.use('/',(req,res)=>{
-    res.send("<h1>welcome to signature app</h1>")
 })
